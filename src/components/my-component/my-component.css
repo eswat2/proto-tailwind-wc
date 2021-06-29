@@ -1,0 +1,9 @@
+@tailwind utilities;
+
+:host {
+  display: block;
+}
+
+.ds1-main {
+  @apply flex flex-col;
+}
