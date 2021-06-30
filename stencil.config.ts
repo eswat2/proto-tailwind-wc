@@ -1,23 +1,22 @@
 import { Config } from '@stencil/core';
 import { postcss } from '@stencil/postcss';
-import autoprefixer from "autoprefixer";
-import tailwindcss from "tailwindcss";
-import cssnano from "cssnano";
+
+const plugins = [
+  require('tailwindcss'),
+  require('autoprefixer'),
+  require('cssnano'),
+]
 
 export const config: Config = {
   namespace: 'proto-tailwind-wc',
+  plugins: [
+    postcss({
+      plugins
+    }),
+  ],
   devServer: {
     reloadStrategy: 'pageReload',
   },
-  plugins: [
-    postcss({
-      plugins: [
-        tailwindcss("./tailwind.config.js"),
-        autoprefixer(),
-        cssnano()
-      ]
-    }),
-  ],
   outputTargets: [
     {
       type: 'dist',

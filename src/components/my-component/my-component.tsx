@@ -29,9 +29,9 @@ export class MyComponent {
   render() {
     return (
       <div class="ds1-main">
-        <label class="font-bold">Hello, World!</label>
-        <label class="mt-6">
-          I'm <span class="text-red-500">{this.getText()}</span>
+        <label class="salute">Hello, World!</label>
+        <label class="container">
+          I'm <span class="my-label">{this.getText()}</span>
         </label>
       </div>
     );
