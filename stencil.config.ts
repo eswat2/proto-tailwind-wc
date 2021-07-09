@@ -1,17 +1,11 @@
 import { Config } from '@stencil/core';
-import { postcss } from '@stencil/postcss';
-
-const plugins = [
-  require('tailwindcss'),
-  require('autoprefixer'),
-  require('cssnano'),
-]
+import tailwind from 'proto-stencil-tailwind';
 
 export const config: Config = {
   namespace: 'proto-tailwind-wc',
   plugins: [
-    postcss({
-      plugins
+    tailwind({
+      inputFile: './src/styles/app.pcss',
     }),
   ],
   devServer: {
