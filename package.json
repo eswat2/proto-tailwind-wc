@@ -24,7 +24,7 @@
     "deploy": "echo --skip"
   },
   "dependencies": {
-    "@stencil/core": "2.6.0"
+    "@stencil/core": "2.7.0"
   },
   "license": "MIT",
   "devDependencies": {
