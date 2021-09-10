@@ -39,7 +39,7 @@
     "proto-stencil-tailwind": "0.0.76",
     "puppeteer": "10.2.0",
     "rollup": "2.56.3",
-    "tailwindcss": "2.2.14",
+    "tailwindcss": "2.2.15",
     "typescript": "4.4.2"
   }
 }
