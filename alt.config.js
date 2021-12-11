@@ -1,14 +1,10 @@
 const tw_clrs = require('proto-tailwindcss-clrs');
 
 module.exports = {
-  mode: 'jit',
   corePlugins: {
     preflight: false,
   },
-  purge: {
-    enabled: true,
-    content: ['./src/**/*.css', './src/**/*.tsx'],
-  },
+  content: ['./src/**/*.css', './src/**/*.tsx'],
   theme: {},
   variants: {},
   plugins: [

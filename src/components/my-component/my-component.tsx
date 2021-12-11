@@ -1,5 +1,7 @@
 import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
+import { Alien } from './alien'
+import { AltWrapper } from './alt-wrapper';
 
 @Component({
   tag: 'my-component',
@@ -29,10 +31,9 @@ export class MyComponent {
   render() {
     return (
       <div class="ds1-main">
+        <Alien class="mb-4" size={48} />
         <label class="salute">Hello, World!</label>
-        <label class="container">
-          I'm <span class="my-label">{this.getText()}</span>
-        </label>
+        <AltWrapper>{this.getText()}</AltWrapper>
       </div>
     );
   }

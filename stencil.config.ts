@@ -1,12 +1,21 @@
 import { Config } from '@stencil/core';
-import tailwind from 'proto-stencil-tailwind';
+import { postcss } from '@stencil/postcss';
+import autoprefixer from 'autoprefixer';
+import tailwind from 'stencil-tailwind-plugin';
+import tailwindConfig from './tailwind.config';
 
 export const config: Config = {
   namespace: 'proto-tailwind-wc',
   plugins: [
     tailwind({
-      inputFile: './src/styles/app.pcss',
+      tailwindCssPath: './src/styles/app.pcss',
+      tailwindConf: tailwindConfig
     }),
+    postcss({
+      plugins: [
+        autoprefixer()
+      ]
+    })
   ],
   devServer: {
     reloadStrategy: 'pageReload',
